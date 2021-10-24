@@ -50,11 +50,29 @@ body.active {
 }
 /* End of Dark, Light Mode */
 
-/* for home section */
 section {
-  padding: 1rem 9%;
+  padding: 1rem 9%; /* for home section */
+
 }
 
+/* Start of Category Section CSS Styles */
+.heading {
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+  border-bottom: .1rem solid var(--light-color);
+  font-size: 3rem;
+  color: var(--black);
+  text-transform: uppercase;
+}
+
+.heading span {
+  color: var(--orange);
+  text-transform: uppercase;
+}
+/* End of Category Section CSS Styles */
+
+
+/* for home section */
 .btn {
   display: inline-block;
   margin-top: 1rem;
@@ -252,6 +270,67 @@ header.active {
 }
 /* End of Home Section CSS Style */
 
+
+/* Start of Category Section CSS Style */
+.category .box-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.category .box-container .box {
+  height: 30rem;
+  flex: 1 1 40rem;
+  border-radius: .5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.category .box-container .box img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.category .box-container .box:hover img {
+  transform: scale(1.1);
+}
+
+.category .box-container .content {
+  position: absolute;
+  bottom: 7rem;
+  left: 2rem;
+}
+
+.category .box-container .content span {
+  font-size: 2rem;
+  color: var(--orange);
+}
+
+.category .box-container .content span {
+  font-size: 3rem;
+  color: #3337;
+  text-transform: uppercase;
+  padding-top: .5rem;
+}
+/* End of Category Section CSS Style */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Start of Media Queries */
 @media (max-width: 991px) {
   html {
@@ -262,9 +341,14 @@ header.active {
     padding: 1.5rem;
   }
 
+  section {
+    padding: 1.5rem;
+  }
+
   .home .content h3 {
     font-size: 5rem;
   }
+
 }
 
 @media (max-width: 768px) {
@@ -293,6 +377,12 @@ header.active {
 @media (max-width: 450px) {
   html {
     font-size: 50%;
+  }
+
+  .heading {
+    text-align: center;
+    font-size: 2.5rem;
+    border-bottom: none;
   }
 }
 /* End of Media Queries */
