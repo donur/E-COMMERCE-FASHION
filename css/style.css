@@ -45,10 +45,32 @@ body {
 body.active {
   --white-color: #111;
   --black-color: #fff;
-  --light-color: rgba(255, 255, 255, .3);
+  --light-color: rgba(255, 255, 255, 0.3);
   background: #222;
 }
 /* End of Dark, Light Mode */
+
+/* for home section */
+section {
+  padding: 1rem 9%;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  border-radius: 5rem;
+  background: var(--black);
+  color: var(--white);
+  font-size: 2rem;
+  padding: 0.9rem 3.5rem;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: var(--orange);
+  color: #fff;
+}
+/* for home section */
 
 /* Start of Header Section CSS Styles */
 header {
@@ -128,7 +150,6 @@ header.active {
 }
 /* End of Header Section CSS Styles */
 
-
 /* Start of Navbar Section CSS Styles */
 .navbar {
   position: fixed;
@@ -154,14 +175,13 @@ header.active {
   height: 15rem;
   width: 15rem;
   border-radius: 50%;
-  border: .5rem solid var(--white);
+  border: 0.5rem solid var(--white);
   object-fit: cover;
-  box-shadow: 5rem 2rem 0 -3rem var(--orange),
-              -5rem -2rem 0 -3rem var(--orange);
-            }
+  box-shadow: 5rem 2rem 0 -3rem var(--orange), -5rem -2rem 0 -3rem var(--orange);
+}
 
 .navbar .user h3 {
-  padding-top: .5rem;
+  padding-top: 0.5rem;
   color: var(--black);
   font-weight: 500;
   font-size: 2rem;
@@ -169,7 +189,7 @@ header.active {
 
 .navbar .links a {
   display: block;
-  border-bottom: .1rem solid var(--light-color);
+  border-bottom: 0.1rem solid var(--light-color);
   font-size: 2rem;
   padding: 1.5rem 0;
   color: var(--black);
@@ -180,7 +200,7 @@ header.active {
 }
 
 .navbar .links a:hover {
-  letter-spacing: .2rem;
+  letter-spacing: 0.2rem;
   color: var(--orange);
 }
 
@@ -196,18 +216,41 @@ header.active {
 .navbar #close:hover {
   color: var(--orange);
 }
-
-
-
-
 /* End of Navbar Section CSS Styles */
 
+/* Start of Home Section CSS Style */
+.home {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap-reverse;
+  gap: 1.5rem;
+}
 
+.home .content {
+  flex: 1 1 40rem;
+}
 
+.home .image {
+  flex: 1 1 40rem;
+  text-align: center;
+}
 
+.home .image img {
+  width: 30vw;
+}
 
+.home .content span {
+  color: var(--orange);
+  font-size: 3rem;
+}
 
-
+.home .content h3 {
+  color: var(--black);
+  font-size: 8rem;
+  text-transform: uppercase;
+}
+/* End of Home Section CSS Style */
 
 /* Start of Media Queries */
 @media (max-width: 991px) {
@@ -218,10 +261,13 @@ header.active {
   header {
     padding: 1.5rem;
   }
+
+  .home .content h3 {
+    font-size: 5rem;
+  }
 }
 
 @media (max-width: 768px) {
-
   header {
     flex-flow: column;
   }
@@ -235,6 +281,13 @@ header.active {
     transform: translateY(-12.5rem);
   }
 
+  .home .content {
+    text-align: center;
+  }
+
+  .home .image img {
+    width: 100%;
+  }
 }
 
 @media (max-width: 450px) {
