@@ -40,6 +40,16 @@ html::-webkit-scrollbar-thumb {
 body {
   background: #eee;
 }
+
+/* Start of Dark, Light Mode */
+body.active {
+  --white-color: #111;
+  --black-color: #fff;
+  --light-color: rgba(255, 255, 255, .3);
+  background: #222;
+}
+/* End of Dark, Light Mode */
+
 /* Start of Header Section CSS Styles */
 header {
   width: 100%;
